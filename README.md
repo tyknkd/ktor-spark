@@ -1,4 +1,4 @@
-This is a simple Dockerized Ktor-Spark web app to demonstrate exception caused when 
+This is a simple dockerized Ktor-Spark web app to demonstrate an exception thrown when 
 dynamically initiating a Spark session via the [Kotlin-Spark API](https://github.com/Kotlin/kotlin-spark-api).
 
 In a shell, run:
@@ -9,6 +9,9 @@ Then, open [http://localhost:8888](http://localhost:8888) in a browser.
 
 An `org.apache.hadoop.fs.UnsupportedFileSystemException` will be thrown:
 ```shell
+app-1  | 2024-04-09 10:26:26.484 [main] INFO  ktor.application - Autoreload is disabled because the development mode is off.
+app-1  | 2024-04-09 10:26:26.720 [main] INFO  ktor.application - Application started in 0.261 seconds.
+app-1  | 2024-04-09 10:26:26.816 [DefaultDispatcher-worker-1] INFO  ktor.application - Responding at http://0.0.0.0:8888
 app-1  | WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
 app-1  | Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
 app-1  | 2024-04-09 10:27:07.885 [eventLoopGroupProxy-4-1] WARN  o.a.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
@@ -126,4 +129,5 @@ app-1  | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.ja
 app-1  | 	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
 app-1  | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 app-1  | 	at java.base/java.lang.Thread.run(Unknown Source)
+app-1  | [6, 7, 8, 9, 10]
 ```
