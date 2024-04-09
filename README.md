@@ -1,6 +1,8 @@
 This is a simple dockerized Ktor-Spark web app to demonstrate an exception thrown when 
 dynamically initiating a Spark session via the [Kotlin-Spark API](https://github.com/Kotlin/kotlin-spark-api).
 
+([GitHub issue](https://github.com/Kotlin/kotlin-spark-api/issues/219))
+
 In a shell, run:
 ```shell
 $ docker compose up
